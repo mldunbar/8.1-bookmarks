@@ -1,5 +1,6 @@
 import BookmarkListView from './views/bookmarkListView';
 
+
 (function(){
   'use strict';
 
