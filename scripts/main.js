@@ -1,3 +1,5 @@
+import BookmarkListView from './views/bookmarkListView';
+
 (function(){
   'use strict';
 
@@ -8,6 +10,7 @@
       {title: "where", url: "http://www.google.com"}
     ]);
 
-    $('body').prepend(JST.index(bookmarks.toJSON()));
+    var listView = new BookmarkListView({collection: bookmarks});
+    $('body').prepend(listView.el);
   });
 })();

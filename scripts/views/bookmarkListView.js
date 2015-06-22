@@ -1,12 +1,12 @@
 export default Backbone.View.extend({
-  template: JST.bookmarks,
+  template: JST.index,
 
   initialize: function(){
     this.render()
   },
 
   render: function(){
-    console.log(this);
+    this.$el.html(this.template(this.collection.toJSON()));
   },
 
 })
