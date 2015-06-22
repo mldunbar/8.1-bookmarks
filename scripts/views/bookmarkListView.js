@@ -30,4 +30,4 @@ export default Backbone.View.extend({
     Backbone.View.prototype.remove.apply(this, arguments);
   }
 
-})
+});

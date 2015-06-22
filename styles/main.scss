@@ -7,4 +7,15 @@ $medium-gray: #cbcbcb;
 
 * {
   margin: 0;
-  padding: 0;}
+  padding: 0;
+}
+
+li{
+  list-style: none;
+  text-align: center;
+  padding-top: 5%;
+}
+
+.hidden {
+  display: none;
+}
