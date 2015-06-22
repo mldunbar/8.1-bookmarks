@@ -24,7 +24,7 @@ export default Backbone.View.extend({
     e.preventDefault();
     var title = this.$('.bookmark-title').val();
     var url = this.$('.bookmark-url').val();
-    this.model.save({
+    this.collection.create({
       title: title,
       url: url
     });

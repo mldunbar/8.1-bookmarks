@@ -6,12 +6,13 @@ export default Backbone.View.extend({
   events: {
     'click .bookmark-edit-button': 'editBookmark',
     'submit .bookmark-edit-form': 'saveBookmark',
-    'click .bookmark-reset': 'resetBookmark'
+    'click .bookmark-reset': 'resetBookmark',
+    'click .bookmark-delete': 'deleteBookmark'
   },
 
   initialize: function(){
     this.render();
-    this.listenTo(this.model, 'change', this.render);
+    this.listenTo(this.collection, 'update', this.render);
   },
 
   render: function(){
@@ -36,6 +37,11 @@ export default Backbone.View.extend({
   resetBookmark: function(){
     var title = this.$('.bookmark-title').val();
     var url = this.$('.bookmark-url').val();
+  },
+
+  deleteBookmark: function(e){
+    e.preventDefault();
+    this.model.destroy();
   }
 
 });

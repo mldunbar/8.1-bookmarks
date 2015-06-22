@@ -5,9 +5,7 @@ var Bookmark = Backbone.Model.extend({
     title: '',
     url: ''
   },
-
-  url: 'https://api.parse.com/1/classes/Bookmark',
-
+    
 });
 
 var BookmarkCollection = Backbone.Collection.extend({
@@ -16,7 +14,7 @@ var BookmarkCollection = Backbone.Collection.extend({
 
   parse: function(response) {
       return response.results;
-    },
+    }
 });
 
 export default {Bookmark, BookmarkCollection};
