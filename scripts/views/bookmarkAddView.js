@@ -7,7 +7,9 @@ export default Backbone.View.extend({
   },
 
   events: {
-    'click button': 'bookmarkAdd'
+    'click button': 'bookmarkAdd',
+    'submit .bookmark-add-form': 'saveBookmark',
+    'click .bookmark-reset': 'resetBookmark'
   },
 
   render: function() {
@@ -16,6 +18,23 @@ export default Backbone.View.extend({
 
   bookmarkAdd: function(){
     this.$('.bookmark-add-form').toggleClass('hidden');
+  },
+
+  saveBookmark: function(e){
+    e.preventDefault();
+    var title = this.$('.bookmark-title').val();
+    var url = this.$('.bookmark-url').val();
+    this.model.save({
+      title: title,
+      url: url
+    });
+    this.$('.bookmark-edit-form').hide();
+  },
+
+  resetBookmark: function(){
+    var title = this.$('.bookmark-title').val();
+    var url = this.$('.bookmark-url').val();
   }
+
 
 });
