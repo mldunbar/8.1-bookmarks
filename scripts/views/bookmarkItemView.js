@@ -25,13 +25,11 @@ export default Backbone.View.extend({
     e.preventDefault();
     var title = this.$('.bookmark-title').val();
     var url = this.$('.bookmark-url').val();
-    this.model.set({
+    this.model.save({
       title: title,
       url: url
     });
-    //this makes sure your attributes have changed
-    //and logs as a model instead of separate data
-    console.log(this.model.toJSON());
+
   }
 
 });

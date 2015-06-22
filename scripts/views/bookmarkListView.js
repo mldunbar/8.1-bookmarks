@@ -1,10 +1,10 @@
 import BookmarkItemView from './bookmarkItemView';
 
 export default Backbone.View.extend({
-  template: JST.index,
 
   initialize: function(){
     this.render()
+    this.listenTo(this.collection, 'update', this.render);
   },
 
   render: function(){

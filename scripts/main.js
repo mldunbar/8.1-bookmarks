@@ -1,17 +1,14 @@
 import BookmarkListView from './views/bookmarkListView';
-
+import {BookmarkCollection} from './models/bookmarks';
+import './ajax-config';
 
 (function(){
   'use strict';
 
   $(document).ready(function(){
-    var bookmarks = new Backbone.Collection([
-      {title: "what", url: "http://www.google.com"},
-      {title: "who", url:"http://www.google.com"},
-      {title: "where", url: "http://www.google.com"}
-    ]);
-
+    var bookmarks = new BookmarkCollection();
+    bookmarks.fetch();
     var listView = new BookmarkListView({collection: bookmarks});
-    $('body').prepend(listView.el);
+    $('body').append(listView.el);
   });
 })();
