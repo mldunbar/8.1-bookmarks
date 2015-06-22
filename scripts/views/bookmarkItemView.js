@@ -20,7 +20,6 @@ export default Backbone.View.extend({
 
   editBookmark: function(e){
     this.$('.bookmark-edit-form').toggleClass('hidden');
-    console.log(this);
   },
 
   saveBookmark: function(e){

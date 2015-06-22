@@ -1,5 +1,11 @@
 var Bookmark = Backbone.Model.extend({
   idAttribute: 'objectId',
+
+  defaults: {
+    title: '',
+    url: ''
+  },
+  
 });
 
 var BookmarkCollection = Backbone.Collection.extend({
