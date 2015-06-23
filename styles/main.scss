@@ -19,3 +19,36 @@ li{
 .hidden {
   display: none;
 }
+
+.bookmark-add-form {
+  text-align: center;
+}
+
+a {
+  border: 1px solid #00BFA5;
+  padding: 1%;
+  border-radius: 10px;
+  background-color: #A7FFEB;
+  color: black;
+}
+
+.bookmark-edit-button {
+  margin-top: 2%;
+  background-color: #D1C4E9;
+  color: #311B92;
+  padding: .5%;
+  border-radius: 10px;
+}
+
+.bookmark-add-button {
+  margin-top: 1%;
+  background-color: #FFF9C4;
+  color: #000;
+  padding: .5%;
+  border-radius: 10px;
+  margin-left: 47%;
+}
+
+button:hover {
+  color: #fff;
+}
